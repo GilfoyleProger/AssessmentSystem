@@ -63,24 +63,49 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EstimateStudentController.xaml.cs">
+      <DependentUpon>EstimateStudentController.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPageController.xaml.cs">
       <DependentUpon>MainPageController.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageCurriculumPageController.xaml.cs">
-      <DependentUpon>ManageCurriculumPageController.xaml</DependentUpon>
+    <Compile Include="ProfessorMainPageController.xaml.cs">
+      <DependentUpon>ProfessorMainPageController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorMainWindow.xaml.cs">
+      <DependentUpon>ProfessorMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfessorsSubjectController.xaml.cs">
+      <DependentUpon>ProfessorsSubjectController.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudentMainWindow.xaml.cs">
       <DependentUpon>StudentMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudentProfessorsWindow.xaml.cs">
-      <DependentUpon>StudentProfessorsWindow.xaml</DependentUpon>
+    <Compile Include="StudentMainWindowController.xaml.cs">
+      <DependentUpon>StudentMainWindowController.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudentSubjectsWindow.xaml.cs">
-      <DependentUpon>StudentSubjectsWindow.xaml</DependentUpon>
+    <Compile Include="StudentProfessorsInformationController.xaml.cs">
+      <DependentUpon>StudentProfessorsInformationController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudentSubjectInformationController.xaml.cs">
+      <DependentUpon>StudentSubjectInformationController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectCurriculumController.xaml.cs">
+      <DependentUpon>SubjectCurriculumController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectMainPageController.xaml.cs">
+      <DependentUpon>SubjectMainPageController.xaml</DependentUpon>
     </Compile>
     <Compile Include="SubjectMainWindow.xaml.cs">
       <DependentUpon>SubjectMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SubjectsMarksController.xaml.cs">
+      <DependentUpon>SubjectsMarksController.xaml</DependentUpon>
+    </Compile>
+    <Page Include="EstimateStudentController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,7 +129,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ManageCurriculumPageController.xaml">
+    <Page Include="ProfessorMainPageController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfessorMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfessorsSubjectController.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,15 +145,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudentProfessorsWindow.xaml">
+    <Page Include="StudentMainWindowController.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudentSubjectsWindow.xaml">
+    <Page Include="StudentProfessorsInformationController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudentSubjectInformationController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubjectCurriculumController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubjectMainPageController.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SubjectMainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SubjectsMarksController.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,6 +203,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="StudentControllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />

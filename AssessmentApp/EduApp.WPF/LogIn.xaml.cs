@@ -23,5 +23,19 @@ namespace EduApp.WPF
         {
             InitializeComponent();
         }
+
+        private void studentButtonClick(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            StudentMainWindow studentMainWindow = new StudentMainWindow();
+            studentMainWindow.Show();
+        }
+
+        private void professorButonClick(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            ProfessorMainWindow professorMainWindow = new ProfessorMainWindow();
+            professorMainWindow.Show();
+        }
     }
 }

@@ -10,33 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace EduApp.WPF
 {
     /// <summary>
-    /// Interaction logic for StudentProfessorsWindow.xaml
+    /// Interaction logic for ProfessorMainPageController.xaml
     /// </summary>
-    public partial class StudentProfessorsWindow : Window
+    public partial class ProfessorMainPageController : UserControl
     {
-        public StudentProfessorsWindow()
+        public ProfessorMainPageController()
         {
             InitializeComponent();
-        }
-
-        private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ButtonOpenMenu_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

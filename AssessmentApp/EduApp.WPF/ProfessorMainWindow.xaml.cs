@@ -15,13 +15,20 @@ using System.Windows.Shapes;
 namespace EduApp.WPF
 {
     /// <summary>
-    /// Interaction logic for SubjectMainWindow.xaml
+    /// Interaction logic for ProfessorMainWindow.xaml
     /// </summary>
-    public partial class SubjectMainWindow : Window
+    public partial class ProfessorMainWindow : Window
     {
-        public SubjectMainWindow()
+        public ProfessorMainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+            LogIn logIn = new LogIn();
+            logIn.Show();
         }
 
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
@@ -36,13 +43,6 @@ namespace EduApp.WPF
             ButtonCloseMenu.Visibility = Visibility.Visible;
         }
 
-        private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-            LogIn logIn = new LogIn();
-            logIn.Show();
-        }
-
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = ListViewMenu.SelectedIndex;
@@ -51,23 +51,23 @@ namespace EduApp.WPF
             {
                 case 0:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new SubjectMainPageController());
+                    GridPrincipal.Children.Add(new ProfessorMainPageController());
                     break;
                 case 1:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new SubjectCurriculumController());
+                    GridPrincipal.Children.Add(new ProfessorsSubjectController());
                     break;
                 case 2:
                     GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new SubjectsMarksController());
+                    GridPrincipal.Children.Add(new EstimateStudentController());
                     break;
                 case 3:
-                    Close();
+                    GridPrincipal.Children.Clear();
+                    GridPrincipal.Children.Add(new EstimateStudentController());
                     break;
                 case 4:
                     System.Diagnostics.Process.Start("https://github.com/GilfoyleProger/AssessmentSystem");
                     break;
-
                 default:
                     break;
             }

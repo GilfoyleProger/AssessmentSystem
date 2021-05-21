@@ -23,6 +23,9 @@ namespace EduApp.WPF
         public MainWindow()
         {
             InitializeComponent();
+            Hide();
+            LogIn logIn = new LogIn();
+            logIn.Show();
         }
 
         private void ButtonPopUpLogout_Click(object sender, RoutedEventArgs e)
@@ -44,22 +47,7 @@ namespace EduApp.WPF
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = ListViewMenu.SelectedIndex;
             
-            switch (index)
-            {
-                case 0:
-            
-                    GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new MainPageController());
-                    break;
-                case 2:
-                    GridPrincipal.Children.Clear();
-                    GridPrincipal.Children.Add(new ManageCurriculumPageController());
-                    break;
-                default:
-                    break;
-            }
         }
     }
 }

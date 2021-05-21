@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace EduApp.WPF
 {
     /// <summary>
-    /// Interaction logic for ManageCurriculumPageController.xaml
+    /// Interaction logic for StudentProfessorsInformationController.xaml
     /// </summary>
-    public partial class ManageCurriculumPageController : UserControl
+    public partial class StudentProfessorsInformationController : UserControl
     {
-        public ManageCurriculumPageController()
+        public StudentProfessorsInformationController()
         {
             InitializeComponent();
         }

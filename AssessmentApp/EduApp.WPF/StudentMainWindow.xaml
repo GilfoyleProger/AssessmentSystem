@@ -38,10 +38,15 @@
                 <GradientStop Color="#FF0EEDE1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+
+        <Grid Margin="60,60,0,0">
+            <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1BE8FC">
-            <TextBlock Text="Головна сторінка студента" HorizontalAlignment="Center" FontSize="22"/>
+            <TextBlock Text="Головна сторінка студента" HorizontalAlignment="Center" FontSize="36"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
-                <TextBlock Text="Ім'я Фамілія" VerticalAlignment="Center" FontSize="18"/>
+                <TextBlock Text="Джур Дмитро" VerticalAlignment="Center" FontSize="18"/>
                 <materialDesign:PopupBox  Margin="10" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
                     <StackPanel Width="150">
                         <Button Content="Налаштування"/>
@@ -70,7 +75,7 @@
                     </Button>
                     <Image Source="Assets\Logo.jpg" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688d">
+                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688d" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="0">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
@@ -87,12 +92,6 @@
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="AccountTie" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
                             <TextBlock Text="Викладачі" VerticalAlignment="Center" Margin="20 10"/>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="60">
-                        <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="FileAccount" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Оформити звіт" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">

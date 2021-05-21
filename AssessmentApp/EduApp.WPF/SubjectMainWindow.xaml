@@ -38,6 +38,11 @@
                 <GradientStop Color="#FF0EEDE1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+
+        <Grid Margin="60,60,0,0">
+            <Grid x:Name="GridPrincipal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
         <Grid Height="60" VerticalAlignment="Top" Background="#FF1BE8FC">
             <TextBlock Text="Назва предмету" HorizontalAlignment="Center" FontSize="36"/>
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
@@ -70,7 +75,7 @@
                     </Button>
                     <Image Source="Assets\Logo.jpg" Width="50" Height="50" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688d">
+                <ListView x:Name="ListViewMenu" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF13688d" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="0">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
@@ -80,7 +85,7 @@
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Glasses" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
-                            <TextBlock Text="Розклад" VerticalAlignment="Center" Margin="20 10"/>
+                            <TextBlock Text="Програма" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem Height="60">
@@ -89,7 +94,12 @@
                             <TextBlock Text="Оцінки" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-
+                    <ListViewItem Height="60">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Backburger" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
+                            <TextBlock Text="Назад" VerticalAlignment="Center" Margin="20 10"/>
+                        </StackPanel>
+                    </ListViewItem>
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="GitHub" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>

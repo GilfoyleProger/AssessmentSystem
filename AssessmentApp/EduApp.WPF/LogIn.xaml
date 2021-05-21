@@ -39,7 +39,7 @@
 
             <TextBox FontFamily="Helvetica"
                              FontWeight="Light"
-                             Text="Username"
+                             Text="Логін"
                              FontSize="36"
                              HorizontalAlignment="Center"
                              Foreground="White"
@@ -72,7 +72,9 @@
                         Background="White"
                         Opacity="0.5" Margin="360,94,372,204" Grid.Row="1"/>
 
-            <Button Height="Auto" Content="LOGIN" Margin="425,169,425,66" Grid.Row="1" Background="#FF13688D"/>
+            <Button Height="Auto" Content="Вхід" Margin="425,169,425,66" Grid.Row="1" Background="#FF13688D"/>
+            <Button x:Name="studentButton" Height="Auto" Content="Студент" Margin="840,169,10,66" Grid.Row="1" Background="#FF13688D" Click="studentButtonClick"/>
+            <Button x:Name="professorButon" Height="Auto" Content="Викладач" Margin="10,169,840,66" Grid.Row="1" Background="#FF13688D" Click="professorButonClick"/>
         </Grid>
     </Grid>
 </Window>
